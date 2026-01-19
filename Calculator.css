@@ -1,0 +1,92 @@
+body {
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Calculator Body */
+.calculator {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 18px;
+  width: 330px;
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.25),
+    0 4px 8px rgba(0,0,0,0.15),
+    inset 0 1px 2px rgba(255,255,255,0.8);
+}
+
+/* Display Screen */
+#display {
+  width: 90%;
+  height: 70px;
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 1px 15px; /* FIX: 15px, not 15x */
+  border: none;
+  border-radius: 10px;
+  background: #e2e8f0;
+  box-shadow:
+    inset 0 4px 10px rgba(0,0,0,0.25),
+    inset 0 -2px 4px rgba(255,255,255,0.4);
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* Base Button Style */
+.btn,
+.btn-operator,
+.clear,
+.equal {
+  background: #ffffff;
+  border: none;
+  padding: 18px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow:
+    0 6px 0 #cbd5e1,
+    0 8px 15px rgba(0,0,0,0.15);
+  transition: all 0.12s ease-in-out;
+}
+
+/* Pressed Button Effect */
+.btn:active,
+.btn-operator:active,
+.clear:active,
+.equal:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #cbd5e1,
+    0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Operator Buttons */
+.btn-operator {
+  background: #f1f5f9;
+}
+
+/* Clear Button */
+.clear {
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+/* Equal Button */
+.equal {
+  grid-column: span 4;
+  background: #dbeafe;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
